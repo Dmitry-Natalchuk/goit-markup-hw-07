@@ -1,0 +1,15 @@
+.list-header {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+}
+.header {
+    border-bottom: 1px solid;
+    border-color: #eeeeee;
+    height: 80px;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+}
