@@ -1,82 +1,45 @@
-.nav-list {
-    display: inline-block;
-    padding-top: 31px;
-    padding-bottom: 31px;
-}
-.nav {
+.nanavigation {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
 }
 
-.nav-list {
+.nanavigation__list {
     position: relative;
+    display: inline-block;
+    padding-top: 31px;
+    padding-bottom: 31px;
     cursor: pointer;
+
+    &:not(:last-child){
+        margin-right: 50px;
+    }
 }
 
-.nav-info {
+.nanavigation__info {
     position: relative;
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover{
+        color: var(--accent-color);
+    }
 }
 
-.nav-info-line::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -32px;
-    width: 100%;
-    height: 4px;
-    background: #2196f3;
-    border-radius: 2px;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-info-line {
+.nanavigation__line {
     color: var(--accent-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav-list:not(:last-child) {
-    margin-right: 50px;
-}
-.mail {
-    display: flex;
-    align-items: center;
-    margin-right: 50px;
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mail-icon {
-    margin-right: 10px;
-    fill: #757575;
-
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.tel {
-    display: flex;
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.tel:focus,
-.tel:hover,
-.mail:focus,
-.mail:hover,
-.nav-info:focus,
-.nav-info:hover {
-    color: var(--accent-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.tel:focus .mail-icon,
-.tel:hover .mail-icon,
-.mail:focus .mail-icon,
-.mail:hover .mail-icon {
-    fill: var(--accent-color);
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -32px;
+        width: 100%;
+        height: 4px;
+        background: #2196f3;
+        border-radius: 2px;
+        transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }

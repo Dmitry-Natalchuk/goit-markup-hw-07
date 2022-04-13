@@ -6,12 +6,12 @@
     display: flex;
     margin-top: 50px;
 }
-.img-box:not(:last-child) {
-    margin-right: 30px;
-}
-
 .img-box {
     position: relative;
+
+    &:not(:last-child){
+        margin-right: 30px;
+    }
 }
 
 .text-img-box {
