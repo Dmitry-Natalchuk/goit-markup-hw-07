@@ -73,7 +73,7 @@ ul {
   height: 80px;
 }
 
-.header div {
+.header__box {
   display: flex;
   align-items: center;
 }
@@ -376,10 +376,6 @@ ul {
   border: 1px solid #2196F3;
 }
 
-.input-modal:not(:placeholder-shown) + .svg-modal {
-  fill: var(--accent-color);
-}
-
 .input-icon {
   display: block;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -393,6 +389,10 @@ ul {
   position: absolute;
   top: 50%;
   left: 12px;
+}
+
+.input-modal:not(:placeholder-shown) + .svg-modal {
+  fill: var(--accent-color);
 }
 
 .textarea-modal {
@@ -804,17 +804,17 @@ ul {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.group-info:focus .clients-icon,
+.group-info:hover .clients-icon {
+  fill: var(--accent-color);
+}
+
 .group-info {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
-}
-
-.group-info:focus .clients-icon,
-.group-info:hover .clients-icon {
-  fill: var(--accent-color);
 }
 
 .img-overlay {
