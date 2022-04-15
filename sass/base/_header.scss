@@ -4,11 +4,11 @@
     border-color: #eeeeee;
     height: 80px;
 }
-
-.header div {
+.header__box{
     display: flex;
     align-items: center;
 }
+
 .header__list {
     display: flex;
     margin-left: auto;
@@ -35,8 +35,9 @@
     fill: #757575;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header__contact:focus .header__icon,
-.header__contact:hover .header__icon {
-    fill: var(--accent-color);
+
+    .header__contact:focus &,
+    .header__contact:hover & {
+        fill: var(--accent-color);
+    }
 }

@@ -42,6 +42,11 @@
     fill: #afb1b8;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .group-info:focus &,
+    .group-info:hover & {
+        fill: var(--accent-color);
+    }
 }
 
 .group-info {
@@ -50,9 +55,4 @@
     align-items: center;
     width: 170px;
     height: 92px;
-}
-
-.group-info:focus .clients-icon,
-.group-info:hover .clients-icon {
-    fill: var(--accent-color);
 }

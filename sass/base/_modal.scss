@@ -5,12 +5,12 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
-}
 
-.backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 .modal {
@@ -92,9 +92,6 @@
         border: 1px solid #2196F3;
     }
 }
-.input-modal:not(:placeholder-shown)+.svg-modal {
-    fill: var(--accent-color);
-}
 
 .input-icon {
     display: block;
@@ -109,6 +106,10 @@
     position: absolute;
     top: 50%;
     left: 12px;
+
+    .input-modal:not(:placeholder-shown)+ & {
+        fill: var(--accent-color);
+    }
 }
 .textarea-modal {
     display: block;
